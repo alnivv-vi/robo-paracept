@@ -39,4 +39,12 @@ trait TestsSplitterTrait
     {
         return $this->task(FailedTestSplitterTask::class, $numGroups);
     }
+
+    /**
+     * @return TestFileSplitterTask|CollectionBuilder
+     */
+    protected function taskSplitTestPlan(int $numGroups)
+    {
+        return $this->task(FailedTestSplitterTask::class, $numGroups);
+    }
 }
